@@ -232,6 +232,10 @@ html {
     font-size: 30px;
 }
 
+.socials {
+    flex-direction: row !important;
+}
+
 /* =========================
    SECTION PORTFOLIO
 ========================= */
@@ -468,7 +472,28 @@ html {
 @media (max-width: 900px) {
     .about-container {
         flex-direction: column;
-        text-align: center;
+        text-align: start;
+    }
+
+    .about-text h2::after {
+        bottom: -5px;
+        height: 2px;
+    }
+
+    .socials-about {
+        justify-content: start;
+    }
+
+    .profile-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-container {
+        gap: 0px;
+    }
+ .about-text a {
+        width: 100%;
     }
 
     .profile-img {
