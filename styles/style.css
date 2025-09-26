@@ -1,6 +1,11 @@
+/* =========================
+   IMPORT POLICES
+========================= */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-/* Reset / base */
+/* =========================
+   RESET / BASE
+========================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +16,6 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     min-height: 100vh;
-    /* permet au contenu de dépasser si besoin */
     background: linear-gradient(135deg, #0a0f2c, #0d1e50);
     color: #fff;
 }
@@ -20,7 +24,13 @@ a {
     text-decoration: none;
 }
 
-/* Slider / hero */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   SLIDER / HERO
+========================= */
 .slider-background {
     width: 100%;
     height: 100%;
@@ -34,14 +44,15 @@ a {
     background-size: cover;
     width: 100%;
     min-height: 100dvh;
-    /* plein écran pour le hero */
     display: flex;
     justify-content: center;
     align-items: flex-end;
     position: relative;
 }
 
-/* Navbar */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -81,7 +92,9 @@ a {
     }
 }
 
-/* Hero content */
+/* =========================
+   HERO CONTENT
+========================= */
 .hero {
     text-align: left;
     color: #fff;
@@ -112,7 +125,16 @@ a {
     margin-bottom: 30px;
 }
 
-/* Boutons - style partagé */
+/* =========================
+   BOUTONS - STYLE PARTAGÉ
+========================= */
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -135,19 +157,20 @@ a {
     color: #fff;
 }
 
-.btn.contact {
+.btn-contact {
     background: #4a80ff;
     color: #fff;
 }
 
-.btn.contact:hover {
+.btn-contact:hover {
     background: #0055ff;
 }
 
-/* Section About */
+/* =========================
+   SECTION ABOUT
+========================= */
 .about {
     background: #0d1e50;
-    /* fond pour détacher du hero */
     max-width: 1440px;
     margin: 48px auto;
     border-radius: 20px;
@@ -180,7 +203,6 @@ a {
     padding-bottom: 8px;
 }
 
-/* Underline (bleu) sous le titre */
 .about-text h2::after {
     content: "";
     position: absolute;
@@ -210,7 +232,9 @@ a {
     font-size: 30px;
 }
 
-/* Section Portfolio */
+/* =========================
+   SECTION PORTFOLIO
+========================= */
 .portfolio {
     background: #0a0f2c;
     max-width: 1440px;
@@ -243,7 +267,7 @@ a {
     border-radius: 2px;
 }
 
-/* Grid / cartes */
+/* Grid de cartes */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -251,18 +275,15 @@ a {
     margin-top: 30px;
 }
 
-/* Card unique et consolidée (plus carrée) */
+/* Carte unique */
 .card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 16px;
     padding: 24px;
     display: flex;
-    /* flex vertical */
     flex-direction: column;
-    /* contenu empilé */
     justify-content: space-between;
-    /* espace entre texte et boutons */
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -278,32 +299,16 @@ a {
     color: #fff;
 }
 
-.tags {
-    margin-bottom: 12px;
-}
-
-.tags span {
-    display: inline-block;
-    background: rgba(74, 128, 255, 0.12);
-    color: #4a80ff;
-    padding: 4px 8px;
-    margin-right: 6px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-}
-
 .card p {
     color: #ccc;
     margin-bottom: 20px;
     flex-grow: 1;
-    /* pousse le texte vers le haut si besoin */
 }
 
 .card .buttons {
     display: flex;
     gap: 10px;
     margin-top: auto;
-    /* colle les boutons en bas */
 }
 
 .btn.demo {
@@ -337,8 +342,6 @@ a {
     margin-bottom: 15px;
 }
 
-/* btn reseaux sociaux */
-
 .button-blue {
     background: #4a80ff;
     color: #ffffffd9;
@@ -351,36 +354,9 @@ a {
     border-radius: 8px;
 }
 
-/* Responsive: empile About (image + texte) sur petits écrans */
-@media (max-width: 900px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-img {
-        margin-bottom: 20px;
-    }
-
-    .hero {
-        padding: 120px 20px;
-    }
-}
-
-/* Responsive grid for very small screens */
-@media (max-width: 420px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about,
-    .portfolio {
-        padding: 40px 20px;
-        margin: 24px auto;
-    }
-}
-/* Section Contact */
-/* Section Contact */
+/* =========================
+   SECTION CONTACT
+========================= */
 .contact {
     background: #0d1e50;
     max-width: 1440px;
@@ -419,12 +395,6 @@ a {
     gap: 20px;
 }
 
-.contact-form .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .contact-form input,
 .contact-form textarea {
     width: 100%;
@@ -449,48 +419,83 @@ a {
     margin-top: 10px;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-/* Bouton retour en haut */
+/* =========================
+   BOUTON RETOUR EN HAUT
+========================= */
 .back-to-top {
-  position: fixed;
-  bottom: 15px;
-  right: 750px;
-  display: flex;
-  flex-direction: column; /* icône au-dessus du texte */
-  align-items: center;
-  gap: 6px;
-  background: rgba(10, 15, 44, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 10px 12px;
-  border-radius: 12px;
-  color: #fff;
-  font-size: 30px;
-  text-decoration: none;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: rgba(10, 15, 44, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 12px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .back-to-top span {
-  
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #4a80ff;
-  font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #4a80ff;
+    font-weight: 600;
 }
 
 .back-to-top.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .back-to-top:hover {
-  background: #fbfcff2e;
-  color: #fff;
+    background: #fbfcff2e;
+    color: #fff;
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .portfolio {
+        padding: 40px 20px;
+        margin: 24px auto;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .buttons a {
+        width: 100%;
+    }
 }
