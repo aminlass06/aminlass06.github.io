@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reset / base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    /* permet au contenu de dépasser si besoin */
+    background: linear-gradient(135deg, #0a0f2c, #0d1e50);
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Slider / hero */
+.slider-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider {
+    background-image: url(../img/fond.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100dvh;
+    /* plein écran pour le hero */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 16px 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 38px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .navbar li {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Hero content */
+.hero {
+    text-align: left;
+    color: #fff;
+    padding: 180px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #4a80ff;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #4a80ff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Boutons - style partagé */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: 0.25s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn.cv {
+    border: 1px solid #4a80ff;
+    color: #4a80ff;
+}
+
+.btn.cv:hover {
+    background: #4a80ff;
+    color: #fff;
+}
+
+.btn.contact {
+    background: #4a80ff;
+    color: #fff;
+}
+
+.btn.contact:hover {
+    background: #0055ff;
+}
+
+/* Section About */
+.about {
+    background: #0d1e50;
+    /* fond pour détacher du hero */
+    max-width: 1440px;
+    margin: 48px auto;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-img {
+    width: 270px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4a80ff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* Underline (bleu) sous le titre */
+.about-text h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 4px;
+    background: #4a80ff;
+    border-radius: 2px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.socials-about {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.socials-about i {
+    font-size: 30px;
+}
+
+/* Section Portfolio */
+.portfolio {
+    background: #0a0f2c;
+    max-width: 1440px;
+    margin: 0 auto 64px auto;
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.portfolio h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #4a80ff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.portfolio h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 4px;
+    background: #4a80ff;
+    border-radius: 2px;
+}
+
+/* Grid / cartes */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Card unique et consolidée (plus carrée) */
+.card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    /* flex vertical */
+    flex-direction: column;
+    /* contenu empilé */
+    justify-content: space-between;
+    /* espace entre texte et boutons */
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.tags {
+    margin-bottom: 12px;
+}
+
+.tags span {
+    display: inline-block;
+    background: rgba(74, 128, 255, 0.12);
+    color: #4a80ff;
+    padding: 4px 8px;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+.card p {
+    color: #ccc;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    /* pousse le texte vers le haut si besoin */
+}
+
+.card .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    /* colle les boutons en bas */
+}
+
+.btn.demo {
+    background: #4a80ff;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn.github {
+    border: 1px solid #4a80ff;
+    color: #4a80ff;
+    padding: 8px 15px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.github,
+.demo {
+    flex: 1;
+}
+
+.flyer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* btn reseaux sociaux */
+
+.button-blue {
+    background: #4a80ff;
+    color: #ffffffd9;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    padding: 6px 15px;
+    border-radius: 8px;
+}
+
+/* Responsive: empile About (image + texte) sur petits écrans */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-bottom: 20px;
+    }
+
+    .hero {
+        padding: 120px 20px;
+    }
+}
+
+/* Responsive grid for very small screens */
+@media (max-width: 420px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about,
+    .portfolio {
+        padding: 40px 20px;
+        margin: 24px auto;
+    }
+}
+/* Section Contact */
+/* Section Contact */
+.contact {
+    background: #0d1e50;
+    max-width: 1440px;
+    margin: 64px auto;
+    border-radius: 8px;
+    padding: 12px 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    color: #fff;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #4a80ff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-top: 35px;
+}
+
+.contact h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+    height: 4px;
+    background: #4a80ff;
+    border-radius: 2px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #4a80ff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-form button {
+    align-self: center;
+    margin-top: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Bouton retour en haut */
+.back-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: 750px;
+  display: flex;
+  flex-direction: column; /* icône au-dessus du texte */
+  align-items: center;
+  gap: 6px;
+  background: rgba(10, 15, 44, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top span {
+  
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #4a80ff;
+  font-weight: 600;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #fbfcff2e;
+  color: #fff;
+}
